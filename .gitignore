@@ -1,0 +1,40 @@
+# ==========================================================
+# Whitelist Approach: Ignore all extensionless binaries, 
+# only track C/C++ source code and project documentation
+# ==========================================================
+
+# 1. Ignore everything by default (catches extensionless binaries like 'solve')
+*
+
+# 2. Allow all directories so Git can traverse subfolders
+!*/
+
+# 3. Allow C and C++ source and header files
+!*.c
+!*.cpp
+!*.cc
+!*.cxx
+!*.h
+!*.hpp
+!*.hh
+!*.hxx
+
+# 4. Allow Git & Project documentation files
+!.gitignore
+!README.md
+!Makefile
+!CMakeLists.txt
+
+# 5. Explicitly ignore compiled objects, macOS debug symbols, and I/O files
+*.dSYM/
+*.o
+*.obj
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+input.txt
+output.txt
+.vscode/
+.DS_Store
